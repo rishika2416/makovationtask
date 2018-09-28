@@ -1,0 +1,269 @@
+/**** ABOUT PAGE ****/
+#logo {
+    margin-top: 0;
+}
+
+#logo svg.horizontal {
+    width: 165px;
+    fill: #fff;
+}
+
+main {
+    overflow: hidden;
+    display: table;
+    width: 100%;
+}
+
+.navWrapper nav > ul li a {
+    color: #463177;
+    text-shadow: none;
+}
+
+.photo-wrapper {
+    width: 50%;
+    min-height: 100vh;
+    height: 100%;
+    background: #463177;
+    display: table-cell;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-container {
+    width: 600px;
+    position: absolute;
+    right: 0;
+    top: 8%;
+    min-height: 75%;
+}
+
+.photo-container img {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    right: 0;
+    top: 0;
+}
+
+.photo-container img.eyes {
+    z-index: 5;
+    visibility: hidden;
+}
+
+.photo-container.left img.eyes-left {
+    visibility: visible;
+}
+
+.photo-container.left img.eyes-right {
+    visibility: hidden;
+}
+
+.photo-container.right img.eyes-left {
+    visibility: hidden;
+}
+
+.photo-container.right img.eyes-right {
+    visibility: visible;
+}
+
+.about-section {
+    min-heiht: 100vh;
+    padding: 140px 210px 150px 100px;
+    display: table-cell;
+    width: 50%;
+    position: relative;
+}
+
+.design-info {
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.design-info > div {
+    float: left;
+    max-width: 300px;
+}
+
+.design-info .experience {
+    margin-right: 70px;
+}
+
+.design-info h5 {
+    margin-bottom: 15px;
+}
+
+.design-info .experience ul {
+    list-style: none;
+}
+
+.design-info .experience ul li {
+    padding-bottom: 40px;
+}
+
+.design-info .experience ul li .date {
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: #463177;
+}
+
+.design-info .experience ul li p {
+    font-size: 16px;
+    font-family: 'Montserrat';
+    color: #463177;
+    margin-bottom: 0;
+}
+
+.design-info .skills p {
+    font-size: 18px;
+    line-height: 36px;
+}
+
+.about-section .cta-wrapper {
+    float: left;
+    width: 100%;
+    margin: 40px 0 0 0;
+}
+
+.about-section .cta-wrapper a {
+    width: 200px;
+    text-align: center;
+    position: static;
+}
+
+.about-section .cta-wrapper a.prev {
+    margin-right: 0;
+}
+
+.liquid-shape-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    z-index: -1000;
+    width: 900px;
+    transform: translateX(7%);
+}
+
+#liquid-shape-about {
+    transform: scaleX(-1);
+    width: 100%;
+    height: 100%;
+}
+
+/****************
+* Responsive CSS
+****************/
+
+/*** ABOUT Responsive ***/
+
+@media all and (max-width: 1600px) {
+    .about-section {
+        padding-left: 50px;
+        padding-right: 80px;
+    }
+}
+
+@media all and (max-width: 1400px) {
+    .liquid-shape-wrapper {
+        transform-origin: right bottom;
+        transform: scale(0.7) translateX(7%);
+    }
+}
+
+@media all and (max-width: 1124px) {
+    .cta-wrapper .cta-btn.prev,
+    .cta-wrapper .cta-btn.next {
+        margin: 0 auto 15px;
+        min-width: 220px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    h1 {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    p {
+        width: auto;
+        min-width: 0;
+    }
+
+    main {
+        display: block;
+    }
+
+    .photo-wrapper {
+        width: auto;
+        display: block;
+        margin: 250px 40px 0;
+        min-height: 500px;
+    }
+
+    .photo-container {
+        top: -10%;
+        transform: none;
+        width: 500px;
+    }
+
+    .about-section {
+        width: auto;
+        display: block;
+        padding: 40px 40px 150px 40px;
+        overflow: hidden;
+    }
+
+    .design-info .experience {
+        margin-right: 80px;
+    }
+
+    .about-section > p {
+        margin: 0;
+        width: 100%;
+    }
+
+    .about-section .cta-wrapper a.prev {
+        margin-right: 10px;
+    }
+
+    .about-section .cta-wrapper {
+        text-align: center;
+    }
+
+    .liquid-shape-wrapper {
+        display: none;
+    }
+}
+
+@media all and (max-width: 625px) {
+
+    .design-info .experience,
+    .design-info > div {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .design-info > div h5,
+    .design-info .experience ul li,
+    .design-info .experience ul li p,
+    .design-info .skills p {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .about-section .cta-wrapper a.prev {
+        margin-right: 0;
+    }
+
+    .photo-wrapper {
+        min-height: 400px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .photo-container {
+        width: 280px;
+        top: 10%;
+    }
+}
